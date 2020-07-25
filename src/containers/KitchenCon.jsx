@@ -7,6 +7,15 @@ export class KitchenCon extends Component {
     microwave: '🎚',
   };
 
+  handleClick = (event) => {
+    this.setState({
+      //   fridge: '🌚',
+      //   stove: '🌚',
+      //   microwave: '🌚',
+      [event.target.name]: '🌚',
+    });
+  };
+
   render() {
     return (
       <div>
@@ -18,6 +27,24 @@ export class KitchenCon extends Component {
           {this.state.microwave}.
         </p>
         <p>Double check everything and make sure all these things are OFF.</p>
+        <button
+          name='fridge'
+          onClick={this.handleClick}
+          value={this.state.fridge}>
+          Fridge Button
+        </button>
+        <button
+          name='stove'
+          onClick={this.handleClick}
+          value={this.state.stove}>
+          Stove Button
+        </button>
+        <button
+          name='microwave'
+          onClick={this.handleClick}
+          value={this.state.microwave}>
+          microwave Button
+        </button>
       </div>
     );
   }
