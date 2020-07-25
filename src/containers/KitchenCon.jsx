@@ -27,6 +27,8 @@ export class KitchenCon extends Component {
           {this.state.microwave}.
         </p>
         <p>Double check everything and make sure all these things are OFF.</p>
+
+        {/* Button will change each state but needs to go back to original state when clicked again */}
         <button
           name='fridge'
           onClick={this.handleClick}
